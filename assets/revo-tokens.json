@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "name": "Revo Fitness Design Tokens",
+    "version": "1.0.0"
+  },
+  "colors": {
+    "brandRed": "#DD2B32",
+    "darkRed": "#AD212D",
+    "brandPink": "#F392BD",
+    "brandYellow": "#FED133",
+    "brandBlack": "#333132",
+    "pureWhite": "#FFFFFF",
+    "warmWhite": "#FFFDF9",
+    "lightGrey": "#F4F3F4",
+    "greyBg": "#F5F5F5",
+    "midGrey": "#C1BFBF",
+    "cream": "#FCF9F1",
+    "lightPink": "#FBEEE7",
+    "eucalyptus": "#8BC6C1"
+  },
+  "typography": {
+    "fontFamily": "\"Greycliff CF\", Inter, \"Segoe UI\", Arial, sans-serif",
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "bold": 700,
+      "extraBold": 800,
+      "black": 900
+    },
+    "scale": {
+      "h1": {
+        "mobile": "44px",
+        "desktop": "60px-88px",
+        "xl": "128px",
+        "lineHeight": 1.1,
+        "weight": 900
+      },
+      "h2": {
+        "mobile": "36px",
+        "desktop": "44px-60px",
+        "xl": "68px",
+        "lineHeight": 1.1,
+        "weight": 800
+      },
+      "h3": {
+        "mobile": "24px",
+        "desktop": "30px-36px",
+        "lineHeight": 1.2,
+        "weight": 800
+      },
+      "body": {
+        "size": "16px",
+        "lineHeight": 1.6,
+        "weight": 400
+      },
+      "bodyLarge": {
+        "size": "18px",
+        "lineHeight": 1.6,
+        "weight": 400
+      },
+      "small": {
+        "size": "14px",
+        "lineHeight": 1.45,
+        "weight": 500
+      }
+    }
+  },
+  "layout": {
+    "contentWidth": "1200px",
+    "pagePaddingMobile": "16px",
+    "pagePaddingDesktop": "24px",
+    "spacing": {
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px"
+    }
+  },
+  "radius": {
+    "xs": "8px",
+    "sm": "10px",
+    "md": "16px",
+    "lg": "24px",
+    "pill": "9999px"
+  },
+  "components": {
+    "primaryButton": {
+      "background": "#DD2B32",
+      "border": "3px solid #333132",
+      "color": "#FFFDF9",
+      "radius": "9999px",
+      "shadow": "0 0 4px rgba(0,0,0,.16), 0 3px 0 1px #333132",
+      "shadowHover": "0 0 4px rgba(0,0,0,.16), 0 6px 0 1px #333132",
+      "fontSize": "1.125rem",
+      "fontWeight": 800
+    },
+    "secondaryButton": {
+      "background": "#FFFDF9",
+      "border": "3px solid #333132",
+      "color": "#333132",
+      "radius": "9999px",
+      "fontWeight": 800
+    },
+    "input": {
+      "height": "48px",
+      "border": "2px solid #333132",
+      "radius": "8px",
+      "paddingX": "16px",
+      "fontSize": "16px"
+    },
+    "textarea": {
+      "minHeight": "140px",
+      "border": "2px solid #333132",
+      "radius": "8px",
+      "padding": "12px 16px",
+      "fontSize": "16px"
+    },
+    "spinner": {
+      "size": "52px",
+      "border": "5px solid rgba(51,49,50,0.12)",
+      "topColor": "#FFFDF9",
+      "rightColor": "#F392BD",
+      "animation": "1s linear infinite"
+    }
+  },
+  "assets": {
+    "logo": "/assets/images/revo-logo-black.svg",
+    "favicon": "assets/images/cropped-revo-favicon-2024-180x180.png",
+    "fontPack": "/assets/fonts/GreycliffCF-Fonts.zip"
+  }
+}

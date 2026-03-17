@@ -1,0 +1,171 @@
+:root {
+  --brand-red: #DD2B32;
+  --dark-red: #AD212D;
+  --brand-pink: #F392BD;
+  --brand-yellow: #FED133;
+  --brand-black: #333132;
+  --pure-white: #FFFFFF;
+  --warm-white: #FFFDF9;
+  --light-grey: #F4F3F4;
+  --grey-bg: #F5F5F5;
+  --mid-grey: #C1BFBF;
+  --cream: #FCF9F1;
+  --light-pink: #FBEEE7;
+  --eucalyptus: #8BC6C1;
+
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  --content-width: 1200px;
+
+  --shadow-button: 0 0 4px rgba(0, 0, 0, 0.16), 0 3px 0 1px #333132;
+  --shadow-button-hover: 0 0 4px rgba(0, 0, 0, 0.16), 0 6px 0 1px #333132;
+
+  --font-primary: "Greycliff CF", Inter, "Segoe UI", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("/assets/fonts/GreycliffCF-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("/assets/fonts/GreycliffCF-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("/assets/fonts/GreycliffCF-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("/assets/fonts/GreycliffCF-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("/assets/fonts/GreycliffCF-Heavy.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--brand-black);
+  background: var(--grey-bg);
+}
+
+.revo-container {
+  width: min(calc(100% - 32px), var(--content-width));
+  margin-inline: auto;
+}
+
+.button-large,
+.is-button-large {
+  align-items: center;
+  background-color: var(--brand-red);
+  border: 3px solid var(--brand-black);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-button);
+  color: var(--warm-white);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 800;
+  gap: 0.75rem;
+  justify-content: space-between;
+  line-height: 1.75rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.button-large:hover,
+.is-button-large:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.button-large::after,
+.is-button-large::after {
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='47' fill='none'%3E%3Cpath fill='%23FFFAF3' d='M22.723 0c4.494 0 8.888 1.372 12.624 3.942 3.737 2.57 6.65 6.223 8.37 10.496a24.026 24.026 0 0 1 1.293 13.514c-.877 4.537-3.041 8.704-6.22 11.975-3.177 3.271-7.226 5.499-11.634 6.401-4.408.903-8.976.44-13.129-1.33-4.152-1.771-7.7-4.769-10.197-8.615A23.88 23.88 0 0 1 0 23.389C0 17.186 2.394 11.237 6.655 6.85 10.917 2.464 16.697 0 22.723 0Z'/%3E%3Cpath stroke='%23DD2B32' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M24.833 14 34 23.5m0 0L24.833 33M34 23.5H12'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 0 0 46px;
+}
+
+.button-large.button-alt,
+.is-button-large.is-alt {
+  background-color: var(--warm-white);
+  color: var(--brand-black);
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+}
+
+.button-large.button-alt::after,
+.is-button-large.is-alt::after {
+  display: none;
+  content: none;
+}
+
+.revo-input,
+.revo-textarea {
+  width: 100%;
+  border: 2px solid var(--brand-black);
+  border-radius: var(--radius-xs);
+  background: var(--pure-white);
+  color: var(--brand-black);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+}
+
+.revo-input {
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.revo-textarea {
+  min-height: 140px;
+  padding: 12px 16px;
+  resize: vertical;
+}
+
+.revo-spinner {
+  width: 52px;
+  height: 52px;
+  border: 5px solid rgba(51, 49, 50, 0.12);
+  border-top-color: var(--warm-white);
+  border-right-color: var(--brand-pink);
+  border-radius: 50%;
+  animation: revo-spin 1s linear infinite;
+}
+
+@keyframes revo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
