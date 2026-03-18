@@ -68,6 +68,16 @@
       text-decoration: none;
     }
 
+    .overview-card.card-x {
+      position: relative;
+      min-height: 280px;
+    }
+    .overview-card.card-x button {
+        position: absolute;
+        bottom: 15px;
+        width: calc(100% - 25px) !important;
+    }
+
     button, input, textarea {
       font: inherit;
     }
@@ -566,6 +576,7 @@
       letter-spacing: -0.03em;
       margin-bottom: 6px;
       word-break: break-word;
+      line-height:120%;
     }
     span.mini-chip {
         margin-bottom: 15px;
@@ -575,7 +586,7 @@
     .component-meta,
     .asset-meta,
     .download-meta {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 1.45;
     }
 
@@ -664,6 +675,10 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      position:relative;
+    }
+    .component-card p.component-meta {
+      min-height: 50px;
     }
 
     .component-preview {
@@ -727,6 +742,16 @@
     .asset-thumb svg {
       max-width: 100%;
       max-height: 100%;
+    }
+
+    .copy-row {
+        position:relative;
+        min-height:150px;
+    }
+
+     .copy-row button {
+        position:absolute;
+        bottom:15px;
     }
 
     .favicon-tile {
@@ -956,7 +981,7 @@
 
       <div class="section-card glass">
         <div class="overview-grid">
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <strong>1200px</strong>
             <div class="muted">Standard max content width.</div>
           </div>
@@ -1241,57 +1266,57 @@
 
       <div class="section-card glass">
         <div class="token-grid">
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Content width</span>
             <div class="metric-value">1200px</div>
             <p class="muted">Most site sections should use this max width.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='max-width: 1200px;'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='max-width: 1200px;' style="width:100%;">Copy</button>
             </div>
           </div>
 
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Page padding</span>
             <div class="metric-value">16px / 24px</div>
             <p class="muted">16px mobile, 24px tablet and desktop.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='padding-inline: clamp(16px, 2vw, 24px);'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='padding-inline: clamp(16px, 2vw, 24px);' style="width:100%;">Copy</button>
             </div>
           </div>
 
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Spacing system</span>
             <div class="metric-value">12 / 16 / 20 / 24 / 32</div>
             <p class="muted">Tight gaps, standard gaps, button padding, card padding and large sections.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='{"sm":"12px","md":"16px","btn":"20px","lg":"24px","xl":"32px"}'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='{"sm":"12px","md":"16px","btn":"20px","lg":"24px","xl":"32px"}' style="width:100%;">Copy</button>
             </div>
           </div>
 
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Breakpoints</span>
             <div class="metric-value">640 / 768 / 1080 / 1250 / 1280 / 1690</div>
             <p class="muted">sm, md, lg, nav, xl and 2xl sizes.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='{"sm":"640px","md":"768px","lg":"1080px","nav":"1250px","xl":"1280px","2xl":"1690px"}'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='{"sm":"640px","md":"768px","lg":"1080px","nav":"1250px","xl":"1280px","2xl":"1690px"}' style="width:100%;">Copy</button>
             </div>
           </div>
 
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Radius system</span>
             <div class="metric-value">8 / 10 / 16 / 24 / pill</div>
             <p class="muted">Inputs, general radius, tiles, cards and pill buttons.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='{"input":"8px","general":"10px","tile":"16px","card":"24px","pill":"9999px"}'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='{"input":"8px","general":"10px","tile":"16px","card":"24px","pill":"9999px"}' style="width:100%;">Copy</button>
             </div>
           </div>
 
-          <div class="overview-card">
+          <div class="overview-card card-x">
             <span class="mini-chip"><span class="mini-dot"></span>Motion</span>
             <div class="metric-value">20s / 7s / 0.75s</div>
             <p class="muted">Marquee, rotate and modal entrance timings.</p>
             <div class="section-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='{"marquee":"20s linear infinite","rotate":"7s linear infinite","modal":"0.75s ease"}'>Copy</button>
+              <button class="btn btn-outline" type="button" data-copy='{"marquee":"20s linear infinite","rotate":"7s linear infinite","modal":"0.75s ease"}' style="width:100%;">Copy</button>
             </div>
           </div>
         </div>
