@@ -981,7 +981,7 @@
 
       <div class="section-card glass">
         <div class="overview-grid">
-          <div class="overview-card card-x">
+          <div class="overview-card">
             <strong>1200px</strong>
             <div class="muted">Standard max content width.</div>
           </div>
