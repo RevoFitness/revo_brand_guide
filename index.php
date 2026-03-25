@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./assets/images/cropped-revo-favicon-2024-180x180.png" sizes="180x180" type="image/png">
+  <link rel="preload" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762" as="style">
+  <link rel="stylesheet" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762">
   <!-- No index / no follow -->
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
@@ -32,7 +34,7 @@
       --panel-bg-soft: rgba(255,255,255,0.92);
       --panel-shadow: 0 10px 28px rgba(0,0,0,0.06);
       --panel-shadow-soft: 0 5px 14px rgba(0,0,0,0.045);
-
+      --panel-shadow-hard:rgba(0,0,0,0.16) 0 0 4px, rgb(51,51,51) 0 3px 0 1px;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
@@ -48,6 +50,24 @@
     * { box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
+
+    .modal-demo {
+      border:3px solid;
+      min-height:400px;
+      border-radius: var(--radius-xl);
+      width:100%;
+      background:var(--light-pink);
+      box-shadow: var(--panel-shadow-hard);
+      max-width:600px;
+      position:relative;
+    }
+     .close-modal {
+      cursor:pointer;
+    }
+
+   p {
+        margin-bottom: 15px;
+    }
 
     body {
       margin: 0;
@@ -218,7 +238,6 @@
     h1 {
       font-size: clamp(2.5rem, 4.4vw, 4.2rem);
       line-height: .95;
-      letter-spacing: -0.05em;
       font-weight: 900;
       margin-bottom: 12px;
       max-width: 8ch;
@@ -227,7 +246,6 @@
     h2 {
       font-size: clamp(2rem, 2.7vw, 2.7rem);
       line-height: .98;
-      letter-spacing: -0.045em;
       font-weight: 900;
       margin-bottom: 8px;
     }
@@ -618,6 +636,8 @@
       min-height:60px;
     }
 
+   
+
     .token-meta strong {
       color: var(--text-primary);
       font-size: 12px;
@@ -691,6 +711,11 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
+    }
+
+    h4 {
+      font-size:30px;
+      font-weight:800;
     }
 
     .input-demo,
@@ -1003,6 +1028,43 @@
         </div>
       </div>
     </section>
+    <section class="section" id="stylesheet-cdn">
+    <div class="section-head">
+      <div>
+        <h2>Stylesheet CDN</h2>
+        <p class="section-intro">
+          Copy and paste the stylesheet tags below into your page head.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-card glass">
+      <div class="overview-grid">
+        <div class="overview-card card-x" style="min-height:217px;">
+          <strong>Revo stylesheet</strong>
+          <div class="muted" style="margin-bottom: 10px;">
+            Use both the preload and stylesheet tags.
+          </div>
+
+          <div class="snippet" style="margin-top: 10px;">
+  <pre><code>&lt;link rel="preload" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762" as="style">
+ link rel="stylesheet" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762"&gt;</code></pre>
+          </div>
+
+          <div class="asset-actions" style="margin-top: 10px;">
+            <button
+              class="btn btn-outline"
+              type="button"
+              data-copy='<link rel="preload" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762" as="style">
+  <link rel="stylesheet" href="https://webforms.revofitness.com.au/assets/css/style.css?v=1772526762">'
+            >
+              Copy CDN tags
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <section class="section" id="logos">
       <div class="section-head">
@@ -1074,10 +1136,71 @@
             <h5 style="margin-top:10px;">Spinner HTML</h5>
             <p class="asset-meta" style="margin-top:6px;">Techy loading state placeholder for apps and forms.</p>
             <div class="asset-actions" style="margin-top:10px;">
-              <button class="btn btn-outline" type="button" data-copy='<div class="revo-spinner" aria-label="Loading"></div>'>Copy HTML</button>
+              <button 
+              class="btn btn-outline" 
+              type="button" 
+              data-copy='<div class="revo-spinner" aria-label="Loading"></div>'
+              >Copy HTML</button>
               <button class="btn btn-ghost" type="button" data-download="spinner">Download</button>
             </div>
           </div>
+
+           <div class="asset-card" style="width:100%;">
+            <div class="asset-thumb alt" style="min-height:450px;">
+              <span class="filter"></span>
+              <div class="modal-demo px-6" aria-hidden="true">
+                <div class="relative w-full mb-2" style="height:40px;">
+                    <button type="button" id="raffle-popup-close" aria-label="Close popup" class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl leading-none text-black hover:bg-black/20 close-modal mt-6">
+                        <svg width="25px" height="25px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" style="
+                            background: #c93d3b;
+                            border-radius: 100%;
+                            padding: 5px;
+                            box-sizing: unset;
+                            margin-bottom: 15px;
+                            border:2px solid #000;
+                        ">
+                            <path fill="#ffffff" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-content  pt-6">
+                  <h4>Modal Title</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is placeholder content to demonstrate how your modal will appear with text inside it.</p>
+
+                  <p>You can use this space for descriptions, confirmations, or additional details that support user actions.</p>
+                  </div>
+
+              </div>
+            </div>
+            <h5 style="margin-top:10px;">Modal HTML</h5>
+            <p class="asset-meta" style="margin-top:6px;">Base modal / section structure..</p>
+            <div class="asset-actions" style="margin-top:10px;">
+              <button class="btn btn-outline" type="button" data-copy='<div class="modal-demo px-6" aria-hidden="true">
+                <div class="relative w-full mb-2" style="height:40px;">
+                    <button type="button" id="raffle-popup-close" aria-label="Close popup" class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl leading-none text-black hover:bg-black/20 close-modal mt-6">
+                        <svg width="25px" height="25px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" style="
+                            background: #c93d3b;
+                            border-radius: 100%;
+                            padding: 5px;
+                            box-sizing: unset;
+                            margin-bottom: 15px;
+                            border:2px solid #000;
+                        ">
+                            <path fill="#ffffff" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-content  pt-6">
+                  <h4>Modal Title</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is placeholder content to demonstrate how your modal will appear with text inside it.</p>
+
+                  <p>You can use this space for descriptions, confirmations, or additional details that support user actions.</p>
+                  </div>
+
+              </div>'>Copy HTML</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
